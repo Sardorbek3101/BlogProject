@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Programmer Blog</title>
+</head>
+<body>
+<header>
+    <h1><a href="{% url 'home' %}">Programmer Blog</a></h1><hr>
+</header>
+{% if user.is_authenticated %}
+<p>Xush kelipsiz {{ user.username }}</p>
+<p><a href="{% url 'logout' %}">Chiqib ketish</a></p>
+{% else %}
+<p>
+    <a href="{% url 'login' %}">Saytga kirish</a> | 
+    <a href="{% url 'singup' %}">Ro'yxatdan o'tish</a>
+</p>
+{% endif %}
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+<footer>
+<h4><a href="{% url 'post_new' %}">Yangi post yaratish</a></h4>
+</footer>
+</body>
+</html>
