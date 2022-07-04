@@ -1,0 +1,31 @@
+header h1 a {
+    color: green;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+header h1 a {
+    color: green;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: system-ui;
+}
+
+.post-entry h2 a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+.post-entry h2 a:hover {
+    color: red;
+    transition: 0.2s;
+}
+
+.post-entry p {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 15px;
+}
